@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DESAIN WEB</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+
+<div id="date-container"></div>
+<script>
+function showDateTo(elemID) {
+
+    var date = new Date();
+    var second = date.getSeconds();
+    var minute = date.getMinutes();
+    var hour = date.getHours();
+    var day = date.getDay();
+    var dayMonth = date.getDate();
+    var month = date.getMonth();
+    var year = date.getYear();
+
+    var dayArray = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum&#39;at", "Sabtu"];
+    var monthArray = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+    if (second < 10) second = '0' + second;
+    if (minute < 10) minute = '0' + minute;
+    if (hour < 10) hour = '0' + hour;
+    if (dayMonth < 10) dayMonth = '0' + dayMonth;
+
+    if (year < 1000) year += 1900;
+
+    document.getElementById(elemID).innerHTML = dayArray[day] + ', ' + dayMonth + ' ' + monthArray[month] + ' ' + year + ' ' + hour + ':' + minute + ':' + second;
+}
+
+setInterval(function() {
+    showDateTo('date-container');
+}, 1000);
+</script>
+</head>
+<body>
+	<div id="pagewrep"> 
+		<div id="header">TUGAS DESAIN WEB PRAKTIK</div>
+
+	<div id="cont-l"><h4 align="center">Sub Menu</h4>
+        
+        <marquee direction="down" scrolldelay="100">
+    <div class="cont-menu">dll</div>
+    <div class="cont-menu">xxx</div>
+    <div class="cont-menu">unch</div>
+    <div class="cont-menu">fffff</div>
+    <div class="cont-menu">zzzzzz></div>   
+    <div class="cont-menu">aararrrrrr</div>
+    <div class="cont-menu">wkkwkwkwkkw</div>
+    <div class="cont-menu">xixixixiix</div>
+    <div class="cont-menu">ahahhahhahah</div>
+    <div class="cont-menu">llalalalallala</div>
+    </marquee> 
+    </div>
+
+    <div id="slideup"></div>
+
+		<div id="cont-m">
+        <div class="marquee">
+            <marquee>TUGAS DIKUMPULKAN SEBELUM UTS</marquee>
+            </div>
+		<div class="cont-video">
+        <video height="600px" width="960px" autoplay loop>
+        <source src="videoplayback.mp4" type="video/mp4"> 
+        </video>
+        </div>      
+        </div>
+		<div id="footer"><h3>Footer</h3></div>
+		<div style="clear:both"></div>
+	</div>
+</body>
+</html>
